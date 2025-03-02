@@ -1,33 +1,31 @@
 import { useState } from 'react';
-import '../styles/Navbar.css'
-import { FaBars } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
-import { HashLink } from 'react-router-hash-link'
-import { Link } from 'react-router-dom'
-
+import '../styles/Navbar.css';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
-    const [statusTampil, setStatusTampil] = useState('')
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    function tampilMenu() {
-        if (statusTampil == '') {
-            setStatusTampil('tampil')
-        } else {
-            setStatusTampil('')
-        }
-    }
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <nav>
-            <div className="wrapper">
+            <div className="wrapper n">
                 <div className="logo">
-                    <Link to="/">RumahRafif</Link>
+                    <a href="/">RumahRafif</a>
                 </div>
-                <button onClick={tampilMenu}>
-                    {
-                        statusTampil == '' ? (<FaBars />) : (<IoMdClose />)
-                    }
+
+                {/* Tombol Hamburger */}
+                <button className={`hamburger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-                <div className={`menu ${statusTampil}`} onClick={tampilMenu}>
+
+                {/* Overlay Menu */}
+                <div className={`menu ${menuOpen ? "tampil" : ""}`} onClick={toggleMenu}>
                     <ul>
                         <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
                         <li><HashLink to="/#about">About</HashLink></li>
@@ -36,7 +34,7 @@ function Navbar() {
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
