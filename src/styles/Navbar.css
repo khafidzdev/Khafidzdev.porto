@@ -68,7 +68,7 @@ nav .wrapper {
   position: fixed;
   top: 0;
   right: -60%; /* Mulai dari luar layar */
-  width: 25%; /* Menutupi setengah layar */
+  width: 30%; /* Menutupi setengah layar */
   height: 100vh;
   background: rgba(0, 0, 0, 0.9); /* Warna hitam transparan */
   display: flex;
