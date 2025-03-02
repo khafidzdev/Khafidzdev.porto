@@ -7,6 +7,7 @@ nav {
   background: transparent; /* Warna transparan */
   z-index: 1200; /* Pastikan di atas semua */
   padding: 10px 20px;
+  max-width: 100vw;
 }
 .n{
   background-color: transparent !important;
@@ -67,8 +68,10 @@ nav .wrapper {
 .menu {
   position: fixed;
   top: 0;
-  right: -60%; /* Mulai dari luar layar */
-  width: 30%; /* Menutupi setengah layar */
+  right: -100vw; /* Awalnya tersembunyi sepenuhnya */
+  width: 80%; /* Gunakan persentase agar lebih responsif */
+  max-width: 300px; /* Batasi agar tidak terlalu besar di layar lebar */
+  box-sizing: border-box;
   height: 100vh;
   background: rgba(0, 0, 0, 0.9); /* Warna hitam transparan */
   display: flex;

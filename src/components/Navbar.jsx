@@ -4,6 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+    
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -32,6 +33,8 @@ function Navbar() {
                    <li><HashLink to="/#about">About</HashLink></li>
                    <li><Link to="/experience">Experience</Link></li>
                </ul>
+               <p style={{color:'white'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illum architecto exercitationem quo repudiandae iure dict
+                a aut ab beatae, amet soluta saepe adipisci accusamus nam hic laudantium odit, voluptate ratione.</p>
            </div>
        
    </nav></>
