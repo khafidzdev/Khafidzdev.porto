@@ -27,6 +27,7 @@ function Navbar() {
                 {/* Overlay Menu */}
                 <div className={`menu ${menuOpen ? "tampil" : ""}`} onClick={toggleMenu}>
                     <ul>
+                        <li><HashLink to="/">Home</HashLink></li>
                         <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
                         <li><HashLink to="/#about">About</HashLink></li>
                         <li><Link to="/experience">Experience</Link></li>
