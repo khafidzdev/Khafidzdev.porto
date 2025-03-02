@@ -1,10 +1,12 @@
 /* ======= NAVBAR ======= */
 nav {
-  background-color: #000;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
-  text-transform: uppercase;
+  right: 0;
+  width: 100%;
+  background: transparent; /* Warna transparan */
+  z-index: 1200; /* Pastikan di atas semua */
+  padding: 10px 20px;
 }
 .n{
   background-color: transparent !important;
@@ -27,7 +29,7 @@ nav .wrapper {
 }
 
 /* ======= HAMBURGER MENU ======= */
-.hamburger {
+ .hamburger {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -36,7 +38,7 @@ nav .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end; /* Memastikan span ke kanan */
   background: none;
   border: none;
   cursor: pointer;
@@ -92,10 +94,13 @@ nav .wrapper {
   padding: 0;
   margin: 0;
   text-align: left;
+  margin-top: 5%;
+
 }
 
 .menu ul li {
   margin: 15px 0;
+
 }
 
 .menu ul li a {

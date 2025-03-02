@@ -11,30 +11,30 @@ function Navbar() {
     };
 
     return (
-        <nav>
-            <div className="wrapper n">
-                <div className="logo">
-                    <a href="/">RumahRafif</a>
-                </div>
+       <> <nav>
+       <div className="wrapper n">
+           {/* <div className="logo">
+               <a href="/">RumahRafif</a>
+           </div> */}
 
-                {/* Tombol Hamburger */}
-                <button className={`hamburger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                {/* Overlay Menu */}
-                <div className={`menu ${menuOpen ? "tampil" : ""}`} onClick={toggleMenu}>
-                    <ul>
-                        <li><HashLink to="/">Home</HashLink></li>
-                        <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
-                        <li><HashLink to="/#about">About</HashLink></li>
-                        <li><Link to="/experience">Experience</Link></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+           {/* Tombol Hamburger */}
+           <button className={`hamburger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
+               <span></span>
+               <span></span>
+               <span></span>
+           </button>
+           </div>
+           {/* Overlay Menu */}
+           <div className={`menu ${menuOpen ? "tampil" : ""}`} onClick={toggleMenu}>
+               <ul>
+                   <li><HashLink to="/">Home</HashLink></li>
+                   <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
+                   <li><HashLink to="/#about">About</HashLink></li>
+                   <li><Link to="/experience">Experience</Link></li>
+               </ul>
+           </div>
+       
+   </nav></>
     );
 }
 
