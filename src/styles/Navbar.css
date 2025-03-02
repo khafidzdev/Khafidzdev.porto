@@ -15,8 +15,7 @@ nav .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  position: relative;
+  width: 100%;
 }
 
 /* ======= LOGO ======= */
@@ -29,16 +28,14 @@ nav .wrapper {
 }
 
 /* ======= HAMBURGER MENU ======= */
- .hamburger {
-  position: absolute;
-  right: 15px;
-  top: 15px;
+.hamburger {
+  margin-left: auto; /* Mendorong hamburger ke kanan */
   width: 50px;
   height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end; /* Memastikan span ke kanan */
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
@@ -71,7 +68,7 @@ nav .wrapper {
   position: fixed;
   top: 0;
   right: -60%; /* Mulai dari luar layar */
-  width: 30%; /* Menutupi setengah layar */
+  width: 25%; /* Menutupi setengah layar */
   height: 100vh;
   background: rgba(0, 0, 0, 0.9); /* Warna hitam transparan */
   display: flex;
@@ -94,7 +91,7 @@ nav .wrapper {
   padding: 0;
   margin: 0;
   text-align: left;
-  margin-top: 5%;
+  margin-top: 10%;
 
 }
 
@@ -106,7 +103,7 @@ nav .wrapper {
 .menu ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
@@ -115,4 +112,25 @@ nav .wrapper {
   .menu ul {
     display: block;
   }
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  -webkit-border-radius: 0;
+}
+
+::-webkit-scrollbar:hover {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #670b9c;
+  -webkit-border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+  background: #670b9c;
+  cursor: pointer;
 }
