@@ -4,7 +4,7 @@ import { FaInstagram, FaTiktok, FaTwitter, FaFacebookF } from "react-icons/fa";
 import ReactTypingEffect from 'react-typing-effect'; // Import library typing effect
 import '../styles/Header.css';
 import BlurText from "../components/BlurText/BlurText";
-
+import TextPressure from '../components/TextPressure/TextPressure';
 function Header() {
     const handleAnimationComplete = () => {
         console.log('Animation completed!');
@@ -46,14 +46,20 @@ function Header() {
         <header>
             <div className="header-jumbotron">
                 <img src={profilePicture} alt="Profile" />
-                <h3>
-                    <ReactTypingEffect
-                        text={["Khafidz Rizziq Alhuda"]}
-                        speed={100} // Kecepatan mengetik
-                        eraseDelay={1500} // Delay sebelum menghapus teks
-                        cursor={'|'}
-                    />
-                </h3>
+                <div style={{position: 'relative', height: '100px'}}>
+  <TextPressure
+    text="Khafidz Rizziq Alhuda"
+    flex={true}
+    alpha={false}
+    stroke={false}
+    width={true}
+    weight={true}
+    italic={true}
+    textColor="#ffffff"
+    strokeColor="#ff0000"
+    minFontSize={100}
+  />
+</div>
                 {/* <p>Programmer - Content Creator - Researcher</p> */}
                 <BlurText
   text="Programmer - Content Creator - Researcher"

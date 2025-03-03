@@ -130,6 +130,8 @@ nav .wrapper {
 
 .menu ul li {
   margin: 15px 0;
+  text-align: left !important;
+
 
 }
 
