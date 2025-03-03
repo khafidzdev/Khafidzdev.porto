@@ -1,53 +1,69 @@
-#about {
-  background-color: #000000;
-  position: relative;
-  font-size: 1.2rem;
-}
-#about > .wrapper {
-  margin: auto;
-  width: 50%;
-}
-#about > .wrapper > h3 {
-  text-align: center;
-  font-size: 2.8rem;
-  margin: 0px 0px 30px 0px;
-  padding: 0px;
-  font-family: "Kanit", sans-serif;
-  color: #333;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
-#about > .wrapper > p {
-  text-align: center;
+.about-section {
+  background-color: #000;
+  padding: 80px 0; /* Ruang atas & bawah */
+  display: flex;
+  justify-content: center;
 }
 
-#about > .wrapper > h4 {
-  text-align: center;
-  font-size: 1.4rem;
-  margin: 0px 0px 20px 0px;
-  padding: 0px;
-  font-family: "Kanit", sans-serif;
-  letter-spacing: 5px;
-  color: #333;
+.about-container {
+  display: flex;
+  align-items: center;
+  max-width: 1000px; /* Lebar maksimal */
+  width: 90%;
+  gap: 40px; /* Jarak antara gambar dan teks */
 }
-.skills {
-  text-align: center;
+
+.about-image {
+  flex: 1; /* Agar gambar dan teks proporsional */
 }
-.skills > svg {
+
+.about-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+  flex: 1;
+  text-align: left; /* Rata kiri */
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.about-btn {
   display: inline-block;
-  color: #74797e;
-  width: 50px;
-  height: auto;
-  margin: 10px;
-  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #4079ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-.skills > svg:hover {
-  color: #aa392d;
+.about-btn:hover {
+  background-color: #d100ff;
 }
 
-@media only screen and (max-width: 1000px) {
-  #about > .wrapper {
-    width: 80%;
+/* Responsif */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    padding: 20px;
   }
 }

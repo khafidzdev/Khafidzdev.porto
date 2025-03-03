@@ -69,12 +69,12 @@ function Header() {
   onAnimationComplete={handleAnimationComplete}
   className="text-2xl mb-8"
 />
-                <div className='socialMedia'>
+                {/* <div className='socialMedia'>
                     <a href=''><FaInstagram /></a>
                     <a href=''><FaTiktok /></a>
                     <a href=''><FaTwitter /></a>
                     <a href=''><FaFacebookF /></a>
-                </div>
+                </div> */}
             </div>
         </header>
     );
