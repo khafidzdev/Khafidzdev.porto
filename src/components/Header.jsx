@@ -3,8 +3,13 @@ import profilePicture from '../assets/profile-picture.png';
 import { FaInstagram, FaTiktok, FaTwitter, FaFacebookF } from "react-icons/fa";
 import ReactTypingEffect from 'react-typing-effect'; // Import library typing effect
 import '../styles/Header.css';
+import BlurText from "../components/BlurText/BlurText";
 
 function Header() {
+    const handleAnimationComplete = () => {
+        console.log('Animation completed!');
+      };
+      
     useEffect(() => {
         const createParticles = (e) => {
             for (let i = 0; i < 3; i++) {
@@ -49,7 +54,15 @@ function Header() {
                         cursor={'|'}
                     />
                 </h3>
-                <p>Programmer - Content Creator - Researcher</p>
+                {/* <p>Programmer - Content Creator - Researcher</p> */}
+                <BlurText
+  text="Programmer - Content Creator - Researcher"
+  delay={150}
+  animateBy="words"
+  direction="top"
+  onAnimationComplete={handleAnimationComplete}
+  className="text-2xl mb-8"
+/>
                 <div className='socialMedia'>
                     <a href=''><FaInstagram /></a>
                     <a href=''><FaTiktok /></a>
