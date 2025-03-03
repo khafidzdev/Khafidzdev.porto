@@ -1,69 +1,204 @@
-.about-section {
+
+.ab{
   background-color: #000;
-  padding: 80px 0; /* Ruang atas & bawah */
-  display: flex;
-  justify-content: center;
 }
 
-.about-container {
-  display: flex;
-  align-items: center;
-  max-width: 1000px; /* Lebar maksimal */
-  width: 90%;
-  gap: 40px; /* Jarak antara gambar dan teks */
-}
 
-.about-image {
-  flex: 1; /* Agar gambar dan teks proporsional */
-}
 
-.about-img {
+/* --- GitHub Calendar Section --- */
+.github-calendar-section {
+  margin-top: 40px;
   width: 100%;
-  max-width: 450px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex; /* Menjadikan flexbox */
+  justify-content: center; /* Memastikan posisi ke tengah */
+  align-items: center;
+  flex-direction: column; /* Agar teks dan kalender tetap dalam satu kolom */
+  text-align: center;
 }
-
-.about-content {
-  flex: 1;
-  text-align: left; /* Rata kiri */
-}
-
-.about-title {
-  font-size: 2rem;
-  font-weight: bold;
+.github-calendar-section h4 {
   color: #fff;
-}
-
-.about-text {
-  font-size: 1.1rem;
-  color: #fff;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
-.about-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4079ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s ease;
+/* --- Skills Section --- */
+.skills-section {
+  margin-top: 40px;
+  text-align: center;
 }
 
-.about-btn:hover {
-  background-color: #d100ff;
+.skills-section h4 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-/* Responsif */
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills svg {
+  font-size: 1.8rem;
+  color: #fcb040;
+  transition: transform 0.3s ease;
+}
+
+.skills svg:hover {
+  transform: scale(1.2);
+  color: #0f623d;
+}
+
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
-  .about-content {
-    padding: 20px;
+  .about-left, .about-right {
+    width: 100%;
+  }
+
+  .about-right {
+    text-align: center;
+  }
+
+  .about-right h3 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+
+  .skills svg {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 15px;
+  }
+
+  .about-right h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 0.85rem;
+  }
+
+  .skills svg {
+    font-size: 1.3rem;
+  }
+}
+/* --- GitHub Section --- */
+.github-container {
+  display: flex;
+  align-items: center; /* Posisi vertikal tengah */
+  justify-content: center; /* Posisi horizontal tengah */
+  flex-wrap: wrap; /* Agar responsif di layar kecil */
+  gap: 20px;
+  margin-top: 40px;
+  max-width: 1000px; /* Membatasi agar tidak terlalu lebar */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Opsional: Tambah efek transparan */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* Pastikan teks dalam container tetap rata tengah */
+}
+
+/* Profil GitHub */
+.github-profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Avatar */
+.github-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.github-username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.github-link {
+  color: #fcb040;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.github-link:hover {
+  color: #0f623d;
+}
+
+/* Kalender GitHub */
+.github-calendar-section {
+  flex: 2;
+  text-align: center; /* Pastikan teks dan kontennya di tengah */
+  max-width: 700px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Ini memastikan kalender tetap di tengah */
+  color: white;
+}
+
+/* --- Perbaikan tampilan GitHub Profile dan Kalender pada Mobile --- */
+@media (max-width: 768px) {
+  .github-container {
+    flex-direction: column; /* Agar profil dan kalender ditumpuk */
+    align-items: center;
+    width: 100%;
+    max-width: 90%; /* Agar tidak terlalu melebar */
+    margin: 0 auto; /* Pastikan tetap di tengah */
+    padding: 10px;
+  }
+
+  .github-profile,
+  .github-calendar-section {
+    max-width: 100%;
+    width: 90%;
+    padding: 10px;
+    text-align: center; /* Pastikan isi tetap rata tengah */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan konten */
+  }
+
+  .github-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .github-username {
+    font-size: 1rem;
+  }
+
+  .github-link {
+    font-size: 0.9rem;
   }
 }

@@ -3,7 +3,6 @@ import '../styles/Navbar.css';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import GradientText from "../components/GradientText/GradientText";
-
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
