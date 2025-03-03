@@ -6,6 +6,7 @@ import { MdOutlineCss } from "react-icons/md";
 import { FaGolang } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiCodeigniter } from "react-icons/di";
+import ScrollReveal from '../components/ScrollReveal/ScrollReveal';
 
 
 function About() {
@@ -13,8 +14,16 @@ function About() {
         <section id="about">
             <div className='wrapper'>
                 <h3>About</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, alias.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, saepe velit, blanditiis suscipit odio non architecto ratione magnam cum porro id nesciunt repudiandae optio assumenda ab ducimus. Nesciunt, eligendi ullam!</p>
+                <ScrollReveal
+  baseOpacity={0}
+  enableBlur={true}
+  baseRotation={5}
+  blurStrength={10}
+>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos hic repudiandae iste magnam. Placeat qui quisquam ducimus corporis sint explicabo, 
+officia nihil magni quis cupiditate, tempore eum perspiciatis voluptas asperiores.
+</ScrollReveal>
+                
                 <h4>Programming Language & Tools</h4>
                 <div className="skills">
                     <FaPhp /><FaHtml5 /><SiJavascript /><FaReact /><MdOutlineCss />

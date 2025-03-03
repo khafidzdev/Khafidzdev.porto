@@ -5,6 +5,7 @@ import ReactTypingEffect from 'react-typing-effect'; // Import library typing ef
 import '../styles/Header.css';
 import BlurText from "../components/BlurText/BlurText";
 import TextPressure from '../components/TextPressure/TextPressure';
+import PixelTransition from '../components/PixelTransition/PixelTransition';
 function Header() {
     const handleAnimationComplete = () => {
         console.log('Animation completed!');
@@ -45,8 +46,31 @@ function Header() {
     return (
         <header>
             <div className="header-jumbotron">
-                <img src={profilePicture} alt="Profile" />
-                <div style={{position: 'relative', height: '100px'}}>
+            <PixelTransition
+  firstContent={
+    <img
+      src={profilePicture}
+      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+    />
+  }
+  secondContent={
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "grid",
+        placeItems: "center",
+        backgroundColor: "#000"
+      }}
+    >
+      <p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" , backgroundColor: "#000"}}>Full Stack Developer</p>
+    </div>
+  }
+  gridSize={12}
+  pixelColor='#ffffff'
+  animationStepDuration={0.4}
+  className="custom-pixel-card"
+/>                <div style={{position: 'relative', height: '100px'}}>
   <TextPressure
     text="Khafidz Rizziq Alhuda"
     flex={true}

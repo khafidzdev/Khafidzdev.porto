@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.7.5",
+    "framer-motion": "^11.18.2",
+    "gsap": "^3.12.7",
     "matter-js": "^0.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
