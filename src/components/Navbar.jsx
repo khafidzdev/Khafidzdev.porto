@@ -3,17 +3,25 @@ import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vs
 import "../styles/Navbar.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // State untuk toggle menu
+  const [isOpen, setIsOpen] = useState(false); // State untuk toggle menu mobile
 
   return (
     <>
       {/* Navbar utama (desktop) */}
       <div className="navbar-container">
         <div className="navbar">
-          <a href="#"><VscHome size={24} /></a>
-          <a href="#"><VscArchive size={24} /></a>
-          <a href="#"><VscAccount size={24} /></a>
-          <a href="#"><VscSettingsGear size={24} /></a>
+          <a href="#" data-tooltip="Home">
+            <VscHome size={24} />
+          </a>
+          <a href="#" data-tooltip="Archive">
+            <VscArchive size={24} />
+          </a>
+          <a href="#" data-tooltip="Account">
+            <VscAccount size={24} />
+          </a>
+          <a href="#" data-tooltip="Settings">
+            <VscSettingsGear size={24} />
+          </a>
         </div>
       </div>
 
@@ -23,11 +31,19 @@ function Navbar() {
       </button>
 
       {/* Navbar Mobile */}
-      <div className={`mobile-menu ${isOpen ? "visible" : "hidden"}`}>
-        <a href="#"><VscHome size={24} className="icon" /></a>
-        <a href="#"><VscArchive size={24} className="icon" /></a>
-        <a href="#"><VscAccount size={24} className="icon" /></a>
-        <a href="#"><VscSettingsGear size={24} className="icon" /></a>
+      <div className={`mobile-menu ${isOpen ? "visible" : ""}`}>
+        <a href="#" data-tooltip="Home">
+          <VscHome size={24} />
+        </a>
+        <a href="#" data-tooltip="Archive">
+          <VscArchive size={24} />
+        </a>
+        <a href="#" data-tooltip="Account">
+          <VscAccount size={24} />
+        </a>
+        <a href="#" data-tooltip="Settings">
+          <VscSettingsGear size={24} />
+        </a>
       </div>
     </>
   );
