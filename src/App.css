@@ -37,7 +37,7 @@ section {
 .wrapper > h1::after {
   content: "";
   display: block;
-  border-bottom: 5px solid #aa392d;
+  border-bottom: 5px solid  #BF00FF;
   width: 25%;
   position: relative;
   bottom: -5px; /* your padding + border-width */

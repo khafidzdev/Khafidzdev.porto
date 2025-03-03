@@ -35,7 +35,7 @@ function About() {
                     pleasing digital solutions. With a strong foundation in both front-end and back-end development, I am adept at 
                     crafting intuitive user interfaces while ensuring robust and efficient server-side logic.
                 </p>
-
+    <h2 style={{color: "white"}}> GitHub Activity </h2>
                 {/* Kontainer GitHub */}
                 <div className="github-container">
                     {/* Profil GitHub (Kiri) */}
@@ -56,7 +56,7 @@ function About() {
 
                     <div className="github-calendar-section">
                         <GitHubCalendar
-                            username="khafidzdev"
+                            username="novanjunaedi"
                             year={2025}
                             fullYear={true}
                             hideTotalCount={true}  

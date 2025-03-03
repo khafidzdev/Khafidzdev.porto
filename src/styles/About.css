@@ -3,7 +3,9 @@
   background-color: #000;
 }
 
-
+.h3{
+  list-style: none !important;
+}
 
 /* --- GitHub Calendar Section --- */
 .github-calendar-section {
