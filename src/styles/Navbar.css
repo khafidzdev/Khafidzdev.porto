@@ -1,81 +1,86 @@
-.dock-container {
-  position: fixed;
-  top: 0; /* Geser ke atas */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px 20px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Pastikan navbar tidak tertutup elemen lain */
-  width: auto;
-}
-
-.dock-menu {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-.dock-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.dock-item:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-.dock-item span {
-  font-size: 12px;
-  margin-top: 4px;
-}
-/* Navbar Default: Desktop Mode (Atas Tengah) */
-.dock-container {
+/* ======== Navbar Utama (Desktop) ======== */
+.navbar-container {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px 20px;
-  border-radius: 12px;
+  left: 0;
+  width: 100%;
+  background-color: black;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 10px 0;
   z-index: 1000;
-  width: auto;
-  transition: all 0.3s ease;
 }
 
-/* Navbar Mode Mobile (Pindah ke Kiri) */
-@media screen and (max-width: 768px) {
-  .dock-container {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    flex-direction: column;
-    border-radius: 12px 0 0 12px;
-    padding: 15px;
-  }
+.navbar {
+  display: flex;
+  gap: 20px;
+}
 
-  .dock-menu {
-    flex-direction: column;
-    gap: 10px;
-  }
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s;
+}
 
-  .dock-item {
-    padding: 12px;
+.navbar a:hover {
+  color: yellow;
+}
+
+/* ======== Navbar Samping (Mobile) ======== */
+/* ======== Navbar Samping (Mobile) ======== */
+.mobile-menu-button {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 4000; /* Pastikan tombol ada di atas */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-100%);
+  background: rgba(0, 0, 0, 0.9); /* Lebih gelap agar terlihat jelas */
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  z-index: 3000; /* Pastikan menu ada di atas semua elemen */
+}
+
+/* Saat menu terlihat */
+.mobile-menu.visible {
+  transform: translateY(-50%) translateX(0);
+}
+
+
+/* ======== Tampilan Responsif ======== */
+/* Sembunyikan navbar utama di mobile */
+@media (max-width: 767px) {
+  .navbar-container {
+    display: none;
   }
 }
+
+/* Sembunyikan navbar mobile di desktop */
+@media (min-width: 768px) {
+  .mobile-menu-button,
+  .mobile-menu {
+    display: none;
+  }
+} 

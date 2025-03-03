@@ -1,38 +1,36 @@
-import React from "react";
-import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc"; // Import ikon dari react-icons
-import "../styles/Navbar.css"; // Import CSS
+import React, { useState } from "react";
+import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
+import "../styles/Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false); // State untuk toggle menu
+
   return (
-    <div className="dock-container">
-      <ul className="dock-menu">
-        <li>
-          <a href="/" className="dock-item">
-            <VscHome size={24} />
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="#portfolio" className="dock-item">
-            <VscArchive size={24} />
-            <span>Portfolio</span>
-          </a>
-        </li>
-        <li>
-          <a href="#about" className="dock-item">
-            <VscAccount size={24} />
-            <span>About</span>
-          </a>
-        </li>
-        <li>
-          <a href="#settings" className="dock-item">
-            <VscSettingsGear size={24} />
-            <span>Settings</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      {/* Navbar utama (desktop) */}
+      <div className="navbar-container">
+        <div className="navbar">
+          <a href="#"><VscHome size={24} /></a>
+          <a href="#"><VscArchive size={24} /></a>
+          <a href="#"><VscAccount size={24} /></a>
+          <a href="#"><VscSettingsGear size={24} /></a>
+        </div>
+      </div>
+
+      {/* Tombol Toggle Menu Mobile */}
+      <button className="mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? "<" : ">"}
+      </button>
+
+      {/* Navbar Mobile */}
+      <div className={`mobile-menu ${isOpen ? "visible" : "hidden"}`}>
+        <a href="#"><VscHome size={24} className="icon" /></a>
+        <a href="#"><VscArchive size={24} className="icon" /></a>
+        <a href="#"><VscAccount size={24} className="icon" /></a>
+        <a href="#"><VscSettingsGear size={24} className="icon" /></a>
+      </div>
+    </>
   );
-};
+}
 
 export default Navbar;
