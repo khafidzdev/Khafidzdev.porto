@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
 import "../styles/Navbar.css";
-
+import { FaBars } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // State untuk toggle menu mobile
 
@@ -10,18 +13,18 @@ function Navbar() {
       {/* Navbar utama (desktop) */}
       <div className="navbar-container">
         <div className="navbar">
-          <a href="#" data-tooltip="Home">
+          <Link to="/" data-tooltip="Home">
             <VscHome size={24} />
-          </a>
-          <a href="#" data-tooltip="Archive">
+          </Link>
+       <HashLink to="/#portfolio" data-tooltip="Portfolio">
             <VscArchive size={24} />
-          </a>
-          <a href="#" data-tooltip="Account">
+          </HashLink>
+       <HashLink  to="/#about" data-tooltip="About">
             <VscAccount size={24} />
-          </a>
-          <a href="#" data-tooltip="Settings">
+          </HashLink>
+       <Link to="/experience" data-tooltip="Experience">
             <VscSettingsGear size={24} />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -32,18 +35,19 @@ function Navbar() {
 
       {/* Navbar Mobile */}
       <div className={`mobile-menu ${isOpen ? "visible" : ""}`}>
-        <a href="#" data-tooltip="Home">
-          <VscHome size={24} />
-        </a>
-        <a href="#" data-tooltip="Archive">
-          <VscArchive size={24} />
-        </a>
-        <a href="#" data-tooltip="Account">
-          <VscAccount size={24} />
-        </a>
-        <a href="#" data-tooltip="Settings">
-          <VscSettingsGear size={24} />
-        </a>
+      <Link to="/" data-tooltip="Home">
+            <VscHome size={24} />
+          </Link>
+       <HashLink to="/#portfolio" data-tooltip="Portfolio">
+            <VscArchive size={24} />
+          </HashLink>
+       <HashLink  to="/#about" data-tooltip="About">
+            <VscAccount size={24} />
+          </HashLink>
+       <Link to="#
+       experience" data-tooltip="Experience">
+            <VscSettingsGear size={24} />
+          </Link>
       </div>
     </>
   );

@@ -9,14 +9,15 @@ import { FaLaravel } from "react-icons/fa";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
+import { section } from 'framer-motion/client';
 
 
 
 function Experience() {
     return (
-        <>
-            <Navbar />
-            <div className="wrapper">
+       <section id="experience" className="ex">
+        
+        <div className="wrapper">
                 <h1>Experience</h1>
                 <VerticalTimeline>
                     <VerticalTimelineElement
@@ -69,9 +70,8 @@ function Experience() {
                     </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>
-            <Footer />
-            <ScrollToTop />
-        </>
+        
+       </section>
     )
 }
 

@@ -48,7 +48,7 @@
 }
 
 .navbar a:hover {
-  color: yellow;
+  color: #670b9c;
 }
 
 /* Tooltip */
@@ -89,6 +89,7 @@
   cursor: pointer;
   font-size: 18px;
   z-index: 5000;
+  margin-left: 7px;
 }
 
 /* Mobile Menu */
@@ -97,7 +98,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%) translateX(-100%);
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(187, 187, 187, 0.24);
   padding: 10px;
   border-radius: 0 10px 10px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -134,7 +135,7 @@
 }
 
 .mobile-menu a:hover {
-  color: yellow;
+  color: #670b9c;
 }
 
 /* Tooltip Nama Menu di Mobile */
