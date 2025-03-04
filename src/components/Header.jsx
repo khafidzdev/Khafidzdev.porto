@@ -23,7 +23,7 @@ manualMode={false}
 blurAmount={5}
 borderColor="purple"
 animationDuration={3}
-pauseBetweenAnimations={1}
+pauseBetweenAnimations={2}
 />
 <BlurText
   text="Programmer - Full Stack - Researcher"

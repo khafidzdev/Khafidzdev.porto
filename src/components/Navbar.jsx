@@ -5,11 +5,13 @@ import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { HashLink } from 'react-router-hash-link'
 import { Link } from 'react-router-dom'
+import SplashCursor from '../components/SplashCursor/SplashCursor'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // State untuk toggle menu mobile
 
   return (
     <>
+    <SplashCursor />
       {/* Navbar utama (desktop) */}
       <div className="navbar-container">
         <div className="navbar">
@@ -44,8 +46,7 @@ function Navbar() {
        <HashLink  to="/#about" data-tooltip="About">
             <VscAccount size={24} />
           </HashLink>
-       <Link to="#
-       experience" data-tooltip="Experience">
+       <Link to="/#experience" data-tooltip="Experience">
             <VscSettingsGear size={24} />
           </Link>
       </div>

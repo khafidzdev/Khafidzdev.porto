@@ -5,7 +5,7 @@
 .scroll-reveal-text {
   font-size: clamp(1rem, 4vw, 1.5rem);
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 6;
   color: aliceblue;
 }
 
