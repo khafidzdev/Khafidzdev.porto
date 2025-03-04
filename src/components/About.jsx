@@ -7,7 +7,7 @@ import { FaGolang } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiCodeigniter } from "react-icons/di";
 import GitHubCalendar from 'react-github-calendar';
-
+import ScrollReveal from '../components/ScrollReveal/ScrollReveal';
 function About() {
     const [githubProfile, setGithubProfile] = useState(null);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -26,7 +26,12 @@ function About() {
         <section id="about" className="ab">
             <div className='wrapper'>
                 <h3>About</h3>
-                <p style={{color: "white"}}>
+                <ScrollReveal
+  baseOpacity={0}
+  enableBlur={true}
+  baseRotation={1}
+  blurStrength={5}
+>
                     I am Khafidz Rizziq Alhuda, a passionate Full Stack Developer specializing in CodeIgniter and Laravel, 
                     currently enhancing my expertise by diving into React. My journey in web development has been driven by a 
                     deep curiosity and a commitment to building scalable, high-performance applications that provide seamless 
@@ -34,7 +39,8 @@ function About() {
                     diverse projects, collaborating with clients to transform their ideas into fully functional and aesthetically 
                     pleasing digital solutions. With a strong foundation in both front-end and back-end development, I am adept at 
                     crafting intuitive user interfaces while ensuring robust and efficient server-side logic.
-                </p>
+</ScrollReveal>
+             
     <h2 style={{color: "white"}}> GitHub Activity </h2>
                 {/* Kontainer GitHub */}
                 <div className="github-container">
@@ -75,6 +81,7 @@ function About() {
                     <FaLaravel /><DiCodeigniter /><FaGit />
                 </div>
             </div>
+            
         </section>
     );
 }

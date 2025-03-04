@@ -7,6 +7,20 @@ header {
   letter-spacing: 5px;
   text-shadow: 0 0 4px #000;
 }
+.custom-class {
+  font-size: 3rem !important; /* Paksa CSS untuk diterapkan */
+  text-align: center;
+  max-width: 90%; /* Hindari teks terlalu panjang */
+  word-wrap: break-word;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .custom-class {
+    font-size: 1.5rem !important; /* Pastikan ukurannya berubah */
+  }
+}
+
 .particle {
   width: 10px;
   height: 10px;

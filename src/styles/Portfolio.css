@@ -18,3 +18,12 @@
 .por{
   background-color: black;
 }
+.item {
+  text-align: center;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 1.25rem;
+  color: #ffffff;
+}

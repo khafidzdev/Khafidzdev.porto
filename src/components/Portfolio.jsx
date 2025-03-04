@@ -15,18 +15,20 @@ function Portfolio() {
 >
 Portfolio
 </GradientText></h3>
-                <div className="grid">
-                    {
-                        portfolioList.map((item) => {
-                            return (
-                                <div className="item" key={item.id}>
-                                    <Link to={`/portfolio/${item.id}`}><img src={item.image} /></Link>
-                                </div>
-                            )
-                        })
-                    }
+               <div className="grid">
+    {portfolioList.map((item) => {
+        return (
+            <div className="item" key={item.id}>
+                <Link to={`/portfolio/${item.id}`}>
+                    <img src={item.image} alt={item.title} />
+                </Link>
+                <p className="description">{item.title}</p>
+                <p className="description">{item.skill}</p>
+            </div>
+        );
+    })}
+</div>
 
-                </div>
             </div>
         </section>
     )

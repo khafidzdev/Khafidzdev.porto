@@ -20,7 +20,9 @@ function Header() {
   enableOnHover={true}
   className='custom-class'
 >
-Khafidz Rizziq Alhuda
+Khafidz 
+Rizziq 
+Alhuda
 </GlitchText>
 <BlurText
   text="Programmer - Full Stack - Researcher"
