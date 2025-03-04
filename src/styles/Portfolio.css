@@ -5,9 +5,28 @@
   justify-content: center;
 }
 
+.grid > .item {
+  text-align: left; /* Pastikan text rata kiri */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #222;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.grid > .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3);
+}
+
 .grid > .item > a > img {
   width: 100%;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid > .item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -15,15 +34,27 @@
     grid-template-columns: 45% 45%;
   }
 }
-.por{
-  background-color: black;
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 90%;
+  }
 }
-.item {
-  text-align: center;
+
+.por {
+  background-color: black;
 }
 
 .description {
   margin-top: 8px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #ffffff;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  text-align: left; /* Buat teks rata kiri */
+  padding-left: 5px; /* Beri sedikit padding agar tidak menempel */
+}
+
+.item:hover .description {
+  opacity: 1;
 }

@@ -24,35 +24,149 @@
 }
 
 /* --- Skills Section --- */
-.skills-section {
-  margin-top: 40px;
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.skills-section h4 {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #030712;
 }
 
 .skills {
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.itemLeft {
+  width: 200px;
+  height: 100px;
+    border-radius: 6px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  align-items: center;
+  font-size: 2rem; /* Ukuran ikon */
+  color: white;
+  position: relative;
+  animation: scrollLeft 10s linear infinite;
 }
 
-.skills svg {
-  font-size: 1.8rem;
-  color: #fcb040;
-  transition: transform 0.3s ease;
+.itemLeft svg {
+  font-size: 5rem; /* Pastikan ikon besar dan terlihat */
 }
 
-.skills svg:hover {
-  transform: scale(1.2);
-  color: #0f623d;
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
 }
 
+@keyframes scrollRight {
+  to {
+    right: -200px;
+  }
+}
+
+.itemLeft,
+.itemRight {
+
+  width: 200px;
+  height: 100px;
+  border-radius: 6px;
+  position: absolute;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  color: #fff;
+}
+
+.itemLeft {
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+}
+
+.itemRight {
+  right: max(calc(200px * 8), calc(100% + 200px));
+  animation-name: scrollRight;
+}
+
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+/* .item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+.item9 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+.item10 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+.item11 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+.item12 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+} */
+
+/* Warna ikon */
+.html { color: #e34f26; } /* HTML - Merah */
+.css { color: #1572b6; } /* CSS - Biru */
+.js { color: #f7df1e; } /* JavaScript - Kuning */
+.bootstrap { color: #7952b3; } /* Bootstrap - Ungu */
+.tailwind { color: #06b6d4; } /* Tailwind - Biru Laut */
+.laravel { color: #ff2d20; } /* Laravel - Merah */
+.codeigniter { color: #ee4623; } /* CodeIgniter - Orange */
+.react { color: #61dafb; } /* React - Biru Muda */
+.csharp { color: #68217a; } /* C# - Ungu */
+.vscode { color: #007acc; } /* Visual Studio Code - Biru */
+.figma { color: #f24e1e; } /* Figma - Merah-Oranye */
+.unity { color: #ffffff; } /* Unity - Putih */
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
   .about-container {
@@ -129,7 +243,19 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
-
+.github-calendar-section {
+  flex: 1;
+  text-align: center; /* Pastikan teks dan kontennya di tengah */
+  max-width: 700px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Ini memastikan kalender tetap di tengah */
+  color: white;
+}
 /* Avatar */
 .github-avatar {
   width: 100px;
@@ -155,19 +281,7 @@
 }
 
 /* Kalender GitHub */
-.github-calendar-section {
-  flex: 2;
-  text-align: center; /* Pastikan teks dan kontennya di tengah */
-  max-width: 700px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Ini memastikan kalender tetap di tengah */
-  color: white;
-}
+
 
 /* --- Perbaikan tampilan GitHub Profile dan Kalender pada Mobile --- */
 @media (max-width: 768px) {

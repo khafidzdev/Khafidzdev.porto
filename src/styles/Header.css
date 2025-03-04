@@ -7,6 +7,7 @@ header {
   letter-spacing: 5px;
   text-shadow: 0 0 4px #000;
 }
+
 .custom-class {
   font-size: 3rem !important; /* Paksa CSS untuk diterapkan */
   text-align: center;

@@ -3,6 +3,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import TrueFocus from '../components/TrueFocus/TrueFocus';
+
 import '../styles/Header.css'
 import BlurText from "../components/BlurText/BlurText";
 import GlitchText from '../components/GlitchText/GlitchText';
@@ -14,16 +16,15 @@ function Header() {
         <header>
             <div className="header-jumbotron">
                 {/* <img src={profilePicture} /> */}
-                <GlitchText
-  speed={1}
-  enableShadows={true}
-  enableOnHover={true}
-  className='custom-class'
->
-Khafidz 
-Rizziq 
-Alhuda
-</GlitchText>
+
+                <TrueFocus 
+sentence="Khafidz Rizziq Alhuda"
+manualMode={false}
+blurAmount={5}
+borderColor="purple"
+animationDuration={3}
+pauseBetweenAnimations={1}
+/>
 <BlurText
   text="Programmer - Full Stack - Researcher"
   delay={150}

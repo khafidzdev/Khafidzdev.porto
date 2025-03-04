@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"; // Tambahkan impor React Hooks
 import '../styles/About.css';
-import { FaPhp, FaHtml5, FaReact, FaBootstrap, FaRust, FaLaravel, FaGit } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
-import { MdOutlineCss } from "react-icons/md";
-import { FaGolang } from "react-icons/fa6";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { DiCodeigniter } from "react-icons/di";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaJs } from "react-icons/fa";
 import GitHubCalendar from 'react-github-calendar';
+import { RiTailwindCssFill } from "react-icons/ri";
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal';
+import { FaLaravel } from "react-icons/fa";
+import { FaBootstrap } from "react-icons/fa";
+import { DiCodeigniter } from "react-icons/di";
 function About() {
     const [githubProfile, setGithubProfile] = useState(null);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -73,13 +74,23 @@ function About() {
                         />
                     </div>
                 </div>
-
-                <h4>Programming Language & Tools</h4>
                 <div className="skills">
-                    <FaPhp /><FaHtml5 /><SiJavascript /><FaReact /><MdOutlineCss />
-                    <FaGolang /><FaBootstrap /><FaRust /><RiTailwindCssFill />
-                    <FaLaravel /><DiCodeigniter /><FaGit />
-                </div>
+  <div className="itemLeft item1"><FaHtml5 className="html" /></div>
+  <div className="itemLeft item2"><FaCss3Alt className="css" /></div>
+  <div className="itemLeft item3"><FaJs className="js" /></div>
+  <div className="itemLeft item4"><FaBootstrap className="bootstrap" /></div>
+
+  <div className="itemLeft item5"><RiTailwindCssFill className="tailwind" /></div>
+  <div className="itemLeft item6"><FaLaravel className="laravel" /></div>
+  <div className="itemLeft item7"><DiCodeigniter className="codeigniter" /></div>
+  {/* <div className="itemLeft item8"><FaReact className="react" /></div>
+  <div className="itemLeft item9"><FaBootstrap className="csharp" /></div>
+  <div className="itemLeft item10"><FaBootstrap className="vscode" /></div>
+  <div className="itemLeft item11"><FaBootstrap className="figma" /></div>
+  <div className="itemLeft item12"><FaBootstrap className="unity" /></div> */}
+
+</div>
+
             </div>
             
         </section>
