@@ -74,22 +74,7 @@ function About() {
                         />
                     </div>
                 </div>
-                <div className="skills">
-  <div className="itemLeft item1"><FaHtml5 className="html" /></div>
-  <div className="itemLeft item2"><FaCss3Alt className="css" /></div>
-  <div className="itemLeft item3"><FaJs className="js" /></div>
-  <div className="itemLeft item4"><FaBootstrap className="bootstrap" /></div>
 
-  <div className="itemLeft item5"><RiTailwindCssFill className="tailwind" /></div>
-  <div className="itemLeft item6"><FaLaravel className="laravel" /></div>
-  <div className="itemLeft item7"><DiCodeigniter className="codeigniter" /></div>
-  {/* <div className="itemLeft item8"><FaReact className="react" /></div>
-  <div className="itemLeft item9"><FaBootstrap className="csharp" /></div>
-  <div className="itemLeft item10"><FaBootstrap className="vscode" /></div>
-  <div className="itemLeft item11"><FaBootstrap className="figma" /></div>
-  <div className="itemLeft item12"><FaBootstrap className="unity" /></div> */}
-
-</div>
 
             </div>
             
